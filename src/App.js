@@ -1,15 +1,14 @@
-import './App.css';
+import React from 'react'
+import GlobalStyle from './styles/global';
+import Header from './components/Header'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-         Preparando o projeto! 
-        </p>
-        
-      </header>
-    </div>
+    <>
+    <GlobalStyle />
+    <Header />
+    </>
   );
 }
 
