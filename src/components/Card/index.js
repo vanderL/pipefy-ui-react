@@ -2,14 +2,14 @@ import React from 'react'
 import { Container, Label } from './style'
 
 
-export default function Card() {
+export default function Card({ data }) {
     return (
         <Container>
             <header>
-                <Label color="#7159c1"/>
+                {data.labels.map(label => <Label key={label} color={label} /> )}      
             </header>
-            <p>Fazer migração completa do servidor</p>
-            <img src="https://uploaddeimagens.com.br/images/002/958/285/full/8biticon.jpg?1605143449" alt="Meu avatar"/>
+            <p>{data.content}</p>
+            <img src={data.user} alt="Meu avatar"/>
         </Container>
     )
 }
